@@ -9,8 +9,9 @@ public class DistanceConverter {
         // - Display conversion results
         // - Handle invalid menu choices
         boolean run = true;
+        Scanner sc = new Scanner(System.in);
+        
         while (run){
-            Scanner sc = new Scanner(System.in);
             System.out.println("Choose conversion direction: ");
             System.out.println("1. Convert Miles to Kilometers");
             System.out.println("2. Convert Kilometers to Miles");

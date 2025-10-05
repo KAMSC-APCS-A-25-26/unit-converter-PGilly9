@@ -9,8 +9,9 @@ public class TempConverter {
         // - Display conversion results
         // - Handle invalid menu choices
         boolean run = true;
+        Scanner sc = new Scanner(System.in);
+
         while (run){
-            Scanner sc = new Scanner(System.in);
             System.out.println("Choose conversion direction:");
             System.out.println("1. Convert Fahrenheit to Celsius");
             System.out.println("2. Convert Celsius to Fahrenheit");

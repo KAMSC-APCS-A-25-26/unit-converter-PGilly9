@@ -9,10 +9,9 @@ public class TimeConverter {
         // - Ask user if they want to convert another time (y/n)
         // - Loop until user chooses to exit
         boolean run = true;
+        Scanner sc = new Scanner(System.in);
 
         while (run) {
-
-            Scanner sc = new Scanner(System.in);
             System.out.println("Convert time to total seconds");
 
             System.out.print("\nEnter hours: ");
@@ -23,11 +22,6 @@ public class TimeConverter {
 
             System.out.print("Enter seconds: ");
             int seconds = sc.nextInt();
-            if (seconds < 0 || minutes < 0 || hours < 0){
-                System.out.println("Invalid input");
-            }
-
-            else {
 
                 System.out.println("\nTime Conversion:");
                 System.out.println("Input: " + hours + " hour, " + minutes + " minute, " + seconds + " second");
@@ -38,7 +32,7 @@ public class TimeConverter {
                 System.out.println(minutes + " minutes x 60 = " + minutes * 60 + " seconds");
                 System.out.println(seconds + " seconds = " + seconds + " seconds");
                 System.out.println("Total seconds: " + ((hours * 3600) + (minutes * 60) + seconds + " seconds"));
-            }
+
 
             System.out.print("\nDo you want to convert another time? (y/n): ");
             sc.nextLine();
