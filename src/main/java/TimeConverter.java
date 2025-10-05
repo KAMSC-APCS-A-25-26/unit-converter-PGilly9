@@ -15,13 +15,13 @@ public class TimeConverter {
             Scanner sc = new Scanner(System.in);
             System.out.println("Convert time to total seconds");
 
-            System.out.print("\nEnter hours:  ");
+            System.out.print("\nEnter hours: ");
             int hours = sc.nextInt();
 
-            System.out.print("Enter minutes:  ");
+            System.out.print("Enter minutes: ");
             int minutes = sc.nextInt();
 
-            System.out.print("Enter seconds:  ");
+            System.out.print("Enter seconds: ");
             int seconds = sc.nextInt();
             if (seconds < 0 || minutes < 0 || hours < 0){
                 System.out.println("Invalid input");
@@ -31,13 +31,13 @@ public class TimeConverter {
 
                 System.out.println("\nTime Conversion:");
                 System.out.println("Input: " + hours + " hour, " + minutes + " minute, " + seconds + " second");
-                System.out.println("Total seconds: " + ((hours * 3600) + (minutes * 60) + seconds + "seconds"));
+                System.out.println("Total seconds: " + ((hours * 3600) + (minutes * 60) + seconds + " seconds"));
 
                 System.out.println("\nCalculation:");
                 System.out.println(hours + " hours x 3600 = " + hours * 3600 + " seconds");
                 System.out.println(minutes + " minutes x 60 = " + minutes * 60 + " seconds");
                 System.out.println(seconds + " seconds = " + seconds + " seconds");
-                System.out.println("Total seconds: " + ((hours * 3600) + (minutes * 60) + seconds + "seconds"));
+                System.out.println("Total seconds: " + ((hours * 3600) + (minutes * 60) + seconds + " seconds"));
             }
 
             System.out.print("\nDo you want to convert another time? (y/n): ");
