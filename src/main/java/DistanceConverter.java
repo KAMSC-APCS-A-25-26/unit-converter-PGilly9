@@ -11,20 +11,21 @@ public class DistanceConverter {
         boolean run = true;
         while (run){
             Scanner sc = new Scanner(System.in);
-            System.out.println("--- Distance Menu---");
+            System.out.println("Choose conversion direction: ");
             System.out.println("1. Convert Miles to Kilometers");
-            System.out.println("2. Convert Kilometers to miles");
+            System.out.println("2. Convert Kilometers to Miles");
             System.out.println("3. Exit");
-            System.out.print("Enter A choice:  ");
+            System.out.print("\nEnter your  choice (1, 2, or 3): ");
             int choice = sc.nextInt();
 
             switch (choice) {
                 case 1: {
-                    System.out.print("Enter the Amount of Miles:  ");
+                    System.out.print("Enter distance in miles:  ");
                     double miles = sc.nextDouble();
                     if (miles > 0) {
                         double kilometers = miles * 1.60935;
-                        System.out.println("\n Kilometers is:  " + kilometers);
+                        System.out.println("Miles: " + miles);
+                        System.out.println("Kilometers: " + kilometers + "\n");
                     } else {
                         System.out.println("Invalid Input");
                     }
@@ -36,7 +37,8 @@ public class DistanceConverter {
                     double kilometers = sc.nextDouble();
                     if (kilometers > 0) {
                         double miles = kilometers / 1.60935;
-                        System.out.println("\n The amount of Miles is:  " + miles);
+                        System.out.println("Kilometers: " + kilometers);
+                        System.out.println("Miles: " + miles + "\n");
                     } else {
                         System.out.println("Invalid Input");
                     }
@@ -44,11 +46,11 @@ public class DistanceConverter {
                 }
                 case 3: {
                     run = false;
-                    System.out.println("GoodBye");
+                    System.out.println("Goodbye!");
                     break;
                 }
                 default:
-                    System.out.println("Invalid Option");
+                    System.out.println("\nInvalid Option\n");
             }
 
             }

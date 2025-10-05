@@ -11,44 +11,40 @@ public class TempConverter {
         boolean run = true;
         while (run){
             Scanner sc = new Scanner(System.in);
-            System.out.println("--- Temperature Menu---");
+            System.out.println("Choose conversion direction:");
             System.out.println("1. Convert Fahrenheit to Celsius");
             System.out.println("2. Convert Celsius to Fahrenheit");
             System.out.println("3. Exit");
-            System.out.print("Enter A choice:  ");
+            System.out.print("\nEnter your choice (1, 2, or 3): ");
             int choice = sc.nextInt();
 
             switch (choice) {
                 case 1: {
-                    System.out.print("Enter the Degrees Fahrenheit:  ");
+                    System.out.print("Enter temperature in Fahrenheit:  ");
                     double fahrenheit = sc.nextDouble();
-                    if (fahrenheit > 0) {
-                        double celsius = (fahrenheit - 32) * 5/9;
-                        System.out.println("\n Celsius is:  " + celsius);
-                    } else {
-                        System.out.println("Invalid Input");
-                    }
+                    double celsius = (fahrenheit - 32) * 5/9;
+                    System.out.println("\nConversion Results:");
+                    System.out.println("Fahrenheit: " + fahrenheit);
+                    System.out.println("Celsius: " + celsius + "\n");
                     break;
                 }
 
                 case 2: {
-                    System.out.print("Enter Degrees Celsius:  ");
+                    System.out.print("Enter temperature in Celsius:  ");
                     double celsius = sc.nextDouble();
-                    if (celsius > 0) {
-                        double fahrenheit = celsius * 9/5 + 32;
-                        System.out.println("\n The Degrees Fahrenheit is:  " + fahrenheit);
-                    } else {
-                        System.out.println("Invalid Input");
-                    }
+                    double fahrenheit = celsius * 9/5 + 32;
+                    System.out.println("\nConversion Results:");
+                    System.out.println("Celsius: " + celsius);
+                    System.out.println("Fahrenheit: " + fahrenheit + "\n");
                     break;
                 }
                 case 3: {
                     run = false;
-                    System.out.println("GoodBye");
+                    System.out.println("Goodbye!");
                     break;
                 }
                 default:
-                    System.out.println("Invalid Option");
+                    System.out.println("\nInvalid Option\n");
             }
 
         }
